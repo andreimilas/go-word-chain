@@ -15,4 +15,4 @@ You can run the project with the following command
 ```
 go run main.go <startWord> <endWord>
 ```
-Where `startWord` and `endWord` are CLI arguments which mark the first and last elements of the chain.
+Where `startWord` and `endWord` are CLI arguments, marking the first and last elements of the chain.
