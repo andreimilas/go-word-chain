@@ -4,7 +4,7 @@
 Andrei Milas
 
 ## Description
-Proposed solutions for Kata19 in Go (http://codekata.com/kata/kata19-word-chains/).
+Proposed solution for Kata19 in Go (http://codekata.com/kata/kata19-word-chains/).
 
 ## Implementation
 Given that each node in the dictionary has several adjacent words and each adjacent word has it's own collection of adjacent words, a tree structure was considered.
