@@ -36,6 +36,7 @@ func readInput(r io.Reader) (dict *Dictionary, err error) {
 	if err != nil {
 		return nil, err
 	}
+	// Each line represents a different word
 	dict = &Dictionary{Words: strings.Split(string(rawDictionary), "\n")}
 
 	return dict, nil
@@ -59,7 +60,7 @@ func (d *Dictionary) FilterByLength(length int) *Dictionary {
 		return nil
 	}
 	dict := &Dictionary{}
-	// Find words of size `length`
+	// Find words of size `length` and add them to the Words slice
 	for _, entry := range d.Words {
 		if len(entry) != length {
 			continue

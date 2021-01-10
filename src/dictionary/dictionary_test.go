@@ -34,7 +34,7 @@ func TestContains(t *testing.T) {
 	}
 	for keyTest, test := range tests {
 		t.Run("Running dictionary test `"+keyTest+"`...", func(t *testing.T) {
-			// run the test
+			// Check if the dictionary contains the test word
 			result := test.dict.Contains(test.word)
 			if test.expectedResult != result {
 				t.Errorf("Test #%s failed; Received %t instead of %t", keyTest, result, test.expectedResult)
@@ -45,7 +45,7 @@ func TestContains(t *testing.T) {
 
 func TestFilterByLength(t *testing.T) {
 	t.Run("Running dictionary test `filter-by-length`...", func(t *testing.T) {
-		// run the test
+		// Return a filtered dictionary by a specified length
 		dict := &Dictionary{Words: []string{"a", "aa", "aaa", "aaron", "ab"}}
 		result := dict.FilterByLength(2)
 		if len(result.Words) != 2 {
@@ -56,7 +56,7 @@ func TestFilterByLength(t *testing.T) {
 
 func TestFilterByLength0(t *testing.T) {
 	t.Run("Running dictionary test `filter-by-length-0`...", func(t *testing.T) {
-		// run the test
+		// Return a nil dictionary if the length filter is 0
 		dict := &Dictionary{Words: []string{"a", "aa", "aaa", "aaron", "ab"}}
 		result := dict.FilterByLength(0)
 		if result != nil {
